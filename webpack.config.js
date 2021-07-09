@@ -10,6 +10,14 @@ module.export = {
     // 出力先のディレクトリ名
     path: outputPath,
   },
+  // エラーを回避するため
+  devtool: 'eval-source-map',
+  devServer: {
+    // ディレクトリを指定(必須)
+    contentBase: outputPath,
+    // 開くファイル(index.html を開く)
+    openPage: './'
+  },
   module: {
     rules: [
       {
